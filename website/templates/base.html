@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+
+
+ <!-- header  of the content stays here--> 
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- IMPORT IN THE CODE BOOTSTRAP --> 
+   <link 
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous"
+   />
+
+       <!-- IMPORT IN THE CODE BOOTSTRAP --> 
+
+      <!-- Bootstrap is going to easier to style the scren app. 
+          THis is A     Content delivery network or CDN -->
+
+          <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    /> 
+
+     <!-- Defining templates of the parent kind which have the capability to modified by its template children. 
+        a. Inherete charecteristics of Prente templates. 
+        b. Child template can change things. --> 
+ 
+        <!-- What is the use of this? -->
+   <title> {% block title %} HOME {% endblock %} </title> 
+      </head>  
+<!--To create a class for the main menu -->
+<body>
+  <!--------------------------------------------------------------------------------------------------------->
+   <!-----------------------------------------------Designer area.------------------------------------------>
+   <!-----------------------------------------------Designer area.------------------------------------------>
+   <!---------------------------------------------------------------------------------------------------------> 
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <button 
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse" 
+      data-target="#navbar"
+      > 
+      
+      <!-- In here we can put any icon  i.e:navbar-toggler-icon" we want to represent out button-->
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+   <!--------------------------------------------------------------------------------------------------------->
+   <!-----------------------------------------------Designer area.-------------------------------------------->
+   <!-----------------------------------------------Designer area.--------------------------------------------->
+   <!---------------------------------------------------------------------------------------------------------> 
+   <!--  In here we'll have collapsable navigation bar 
+            NOTE: this is to be changed according to figma design  -->
+
+    <div class="collapse navbar-collapse" id="navbar" >
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" id="login"   href="/login"> Login</a> <!--redirection of click-->
+               <a class="nav-item nav-link" id="sign_up"  href="/sign_up"> Sign Up</a> <!--redirection of click-->
+               <a class="nav-item nav-link" id="logout"   href="/logout">  Log Out</a> <!--redirection of click-->
+               <a class="nav-item nav-link" id="home"     href="/">       HOME</a> <!--redirection of click-->
+             <!-- <a class="nav-item nav-link" id="login"   href="/login"> green</a> redirection of click-->-->            
+           </div>
+     </div>
+   </nav>
+
+   <!-- to flash messages.-->
+   {% with messages = get_flashed_messages(with_categories=true) %}
+   {%  if messages %} 
+     {% for  category, message in messages %}
+     {% if category == 'error' %}
+     <div class="alert alert-danger alert-dismissable fade show"  role="alert" >
+      <!--this is the message we chose-->
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert"> 
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>  
+    {% else %}
+    <div class="alert alert-success alert-dismissable fade show"  role="alert" >
+      <!--this is the message we chose-->
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert"> 
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>  
+     {% endif %}
+     {% endfor %}
+   {% endif %}
+   {% endwith %}
+     
+   <div class="container">{% block content %}
+     {% endblock %} 
+    </div>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+   integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous">
+   </script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" 
+    crossorigin="anonymous">
+   </script>
+ <!-- body of the content stays here--> 
+
+ <!-- <script>
+
+   # NOTE: in order to include my own JS and CSS( anything unchanging, static) 
+    This is the line of code that I would include in here and create the files to 
+     match, I.E:  index.js in the folder "STATIC". This is JINJA stuff > END NOTE
+   type="text/javascript"
+   src="{{ url_for('static', filename='index.js') }}"
+
+
+</script>
+ --->
+</body>
+
+</html>
+
+<!--- https://www.w3schools.com/tags/ref_av_dom.asp -->  
+
+<!--This link will get us all the comands we need. for controling html -->

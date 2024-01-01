@@ -1,0 +1,50 @@
+Project:    APP that allows calls and video calls using the phone number. 
+            With slight modifications.
+
+1. indentation error. 
+     fix: fixed the indentation follwing EDI guidence. 
+2. trying to get in a pic in the base.html and forgetting to delete the line of code after it was clear it wouldn't work. 
+     fix: A. deleted the line in base.html 
+          B.and HAD TO TURN OFF THE COMPUTER. 
+
+3.Problems with jinga language " {%%}, block content, endblock and their order and frequency. 
+
+4. mistake on using " len " for length on evaluating the length of the user input email. 
+
+5.    "applic = creating_app()" has a problem that only appears on the ide terminal. 
+6.    termainal: line 33, in " creating_app .... from .auth import auth. And the others have same type of flavour of bugs. 
+
+7. Now I am unable to use the pip command. It seems to have to do with 
+   path and environment. So this is a connection of computer and the instalation of python. 
+   And something to do with scipts it should like this: Computerdisk/info_about_pc/file.S
+
+8. Proposed solution is realy on others exepertise. 
+
+
+   
+I will be back tomorrow if the universe creater allows. 
+
+
+
+Objectives: 
+
+This app should graph data easily. In a small intuitive form. 
+To get there I intend to use come functions to display that. 
+
+Right now: I am working on the data base which will be populated by the user, 
+and 
+the next step will be notifications triggered by time. 
+The app should keep track of the happiness of users with their interactions with the app. 
+A total focus on value added into their lives. 
+Questions seeking to measure individuality and community are the directions emmbeded in my philosophy. 
+
+
+
+Idea:  
+Notes input taking through microphone and displayed in color and shapes made by the programmers. 
+In the way of small ai. 
+a. hardware issue. 
+b. and software can be grok. 
+
+
+
