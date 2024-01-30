@@ -30,7 +30,7 @@ DB_NAME = "database.db"
 
 
 
-# Func taking input from various files which are writen in Html, js, bootstrap, jinga 
+# Func taking input from various files which are writen in Html, js, bootstrap, jinga
 
 def creating_app(): 
     applic = Flask(__name__)   # __name__    ?  # note: d you have flask in your machine? 
@@ -53,17 +53,15 @@ def creating_app():
 
     from .models import User, Note 
 
-    #from .models import User,Note
+    with applic.app_context():
+            create_database()
 
-    create_database(applic)
-    
+    return applic
+
     return applic
 
 
-
-
-
-def create_database(applic):
+def create_database():
   if not path.exists('website/' + DB_NAME):  ## if it does not exist 
-      db.create_all(app=applic)              ##  create the db for this application. 
+      db.create_all()              ##  create the db for this application. 
       print(" the data base is done.")

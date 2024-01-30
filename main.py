@@ -49,7 +49,8 @@ from flask import (
     url_for,
 )
 
-from board.database import get_db
+# This line leads nowhere, need to figure out what this does and why is it here.
+# from board.database import get_db
 
 bp = Blueprint("posts", __name__)
 
